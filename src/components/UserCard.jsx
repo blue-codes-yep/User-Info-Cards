@@ -1,15 +1,16 @@
 import React, { Component } from "react";
 import './UserCard.css'
+import Card from 'react-bootstrap/Card'
 
 class UserCard extends Component {
     state = {
-       userArray: []
+        userArray: []
     }
 
 
 
     async get() {
-        const response = await fetch('https://randomuser.me/api/?results=10')
+        const response = await fetch('https://randomuser.me/api/?results=5')
         const data = await response.json();
         return data;
     }
@@ -36,22 +37,28 @@ class UserCard extends Component {
     render() {
         const { userArray } = this.state;
         return (
-            <div className='cards'>
+         
+            <Card style={{ width: '15em' }}>
                 {userArray.map(user =>
 
-                    <section className="cards">
-                        
-                        <img className='userPhoto' src={user.userImage} 
-                        alt='randompic'></img>
+                    <section className="cardContent">
+
+                        <Card.Img variant="top"className='userPhoto' src={user.userImage}
+                            alt='randompic'/>
+                        <Card.Body>
+                        <Card.Text>
                             <p className="userInfo">{user.userName} </p>
                             <p className="userContact">{user.contact}</p>
+                            </Card.Text>
+                        </Card.Body>
                     </section>
                 )}
-            </div>
+
+            </Card>
         );
     }
 
-    
+
 }
 
 export default UserCard

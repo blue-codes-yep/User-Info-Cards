@@ -1,43 +1,10 @@
-.cards {
-    position: relative;
-    padding: 20px 0;
-    margin: 3%;
-    width: 550px;
-    background: #fff;
-    border-radius: 3px;
-    box-shadow: 0 0 1px rgba(0,0,0,.5);
-    overflow: hidden;
-    text-align: center;
-    
+
+
+.card {
+    margin: 5px;
 }
-.cards:hover {
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.4);
-  }
 
-
-
-/* .userInfo {
-    position: relative;
-    display: flex;
-    align-items: center;
-
-} */
-
-/* .userContact {
-    position: relative;
-    display: flex;
-    align-items: flex-end;
-    padding: auto;
-
-} */
-
-.userPhoto {
-    position: relative;
-    background: #fff;
-    padding: 5px;
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    margin-bottom: 30px;
-    border: 1px solid rgba(0, 0, 0, 0.25);
+.cardContent {
+    margin: 3px;
+    border: 1px solid;
 }
