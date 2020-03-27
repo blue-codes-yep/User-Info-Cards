@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import './UserCard.css'
 import Card from 'react-bootstrap/Card'
 
+
 class UserCard extends Component {
     state = {
         userArray: []
@@ -33,28 +34,29 @@ class UserCard extends Component {
             })
         }
     }
-
     render() {
         const { userArray } = this.state;
+
         return (
-         
-            <Card style={{ width: '15em' }}>
-                {userArray.map(user =>
+   
+                <Card style={{ width: '15em' }}>
+                    {userArray.map(user =>
 
-                    <section className="cardContent">
+                        <section className="cardContent">
 
-                        <Card.Img variant="top"className='userPhoto' src={user.userImage}
-                            alt='randompic'/>
-                        <Card.Body>
-                        <Card.Text>
-                            <p className="userInfo">{user.userName} </p>
-                            <p className="userContact">{user.contact}</p>
-                            </Card.Text>
-                        </Card.Body>
-                    </section>
-                )}
+                            <Card.Img variant="top" className='userPhoto' src={user.userImage}
+                                alt='randompic' />
+                            <Card.Body>
+                                <Card.Text>
+                                    <p className="userInfo">{user.userName} </p>
+                                    <p className="userContact">{user.contact}</p>
+                                </Card.Text>
+                            </Card.Body>
+                        </section>
+                    )}
 
-            </Card>
+                </Card>
+
         );
     }
 
