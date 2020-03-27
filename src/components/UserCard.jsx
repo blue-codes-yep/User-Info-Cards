@@ -37,10 +37,11 @@ class UserCard extends Component {
     render() {
         const { userArray } = this.state;
         return (
+         
             <Card style={{ width: '15em' }}>
                 {userArray.map(user =>
 
-                    <section>
+                    <section className="cardContent">
 
                         <Card.Img variant="top"className='userPhoto' src={user.userImage}
                             alt='randompic'/>
