@@ -7,15 +7,16 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 function App() {
   return (
     <div className="App">
-      <div className="container">
-        <h1>User Info</h1>
-
+      <h1 className="title">User Info</h1>
+      <div className="container-fluid">
         <UserCard />
-        <div className="row">
-          <UserCard />
-        </div>
+        <UserCard />
+        <UserCard />
+        <UserCard />
       </div>
+     
     </div>
+
   );
 }
 
